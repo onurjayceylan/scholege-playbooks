@@ -1,200 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Scholege Speaking Club - Teacher Playbooks</title>
-      <style>
-                * {
-                              margin: 0;
-                              padding: 0;
-                              box-sizing: border-box;
-                }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scholege Speaking Club - Teacher Playbooks</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-                body {
-                              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                              background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-                              min-height: 100vh;
-                              padding: 40px 20px;
-                }
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        padding: 40px 20px;
+      }
 
-                .container {
-                              max-width: 1000px;
-                              margin: 0 auto;
-                }
+      .container {
+        max-width: 1000px;
+        margin: 0 auto;
+      }
 
-                header {
-                              text-align: center;
-                              color: white;
-                              margin-bottom: 60px;
-                }
+      header {
+        text-align: center;
+        color: white;
+        margin-bottom: 60px;
+      }
 
-                header h1 {
-                              font-size: 48px;
-                              margin-bottom: 15px;
-                              text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-                }
+      header h1 {
+        font-size: 48px;
+        margin-bottom: 15px;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      }
 
-                header p {
-                              font-size: 18px;
-                              opacity: 0.95;
-                }
+      header p {
+        font-size: 18px;
+        opacity: 0.95;
+      }
 
-                .playbooks-grid {
-                              display: grid;
-                              grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-                              gap: 30px;
-                              margin-bottom: 60px;
-                }
+      .playbooks-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+        margin-bottom: 60px;
+      }
 
-                .playbook-card {
-                              background: white;
-                              border-radius: 12px;
-                              overflow: hidden;
-                              box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-                              transition: transform 0.3s ease;
-                              display: flex;
-                              flex-direction: column;
-                }
+      .playbook-card {
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        transition: transform 0.3s ease;
+        display: flex;
+        flex-direction: column;
+      }
 
-                .playbook-card:hover {
-                              transform: translateY(-10px);
-                }
+      .playbook-card:hover {
+        transform: translateY(-10px);
+      }
 
-                .card-header {
-                              padding: 30px;
-                              color: white;
-                              text-align: center;
-                }
+      .card-header {
+        padding: 30px;
+        color: white;
+        text-align: center;
+      }
 
-                .card-1 .card-header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
-                .card-2 .card-header { background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); }
-                .card-3 .card-header { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
-                .card-4 .card-header { background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); }
+      .card-1 .card-header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+      .card-2 .card-header { background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); }
+      .card-3 .card-header { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+      .card-4 .card-header { background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); }
 
-                .card-header h2 {
-                              font-size: 24px;
-                              margin-bottom: 10px;
-                }
+      .card-header h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
 
-                .card-header p {
-                              font-size: 14px;
-                              opacity: 0.9;
-                }
+      .card-header p {
+        font-size: 14px;
+        opacity: 0.9;
+      }
 
-                .card-content {
-                              padding: 25px;
-                              flex-grow: 1;
-                              display: flex;
-                              flex-direction: column;
-                }
+      .card-content {
+        padding: 25px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+      }
 
-                .card-content p {
-                              color: #666;
-                              font-size: 15px;
-                              margin-bottom: 15px;
-                }
+      .card-content p {
+        color: #666;
+        font-size: 15px;
+        margin-bottom: 15px;
+      }
 
-                .card-pages {
-                              color: #999;
-                              font-size: 13px;
-                              margin-bottom: 20px;
-                }
+      .card-pages {
+        color: #999;
+        font-size: 13px;
+        margin-bottom: 20px;
+      }
 
-                .btn {
-                              display: inline-block;
-                              padding: 12px 24px;
-                              border-radius: 6px;
-                              text-decoration: none;
-                              font-weight: 600;
-                              text-align: center;
-                              margin-top: auto;
-                              color: white;
-                }
+      .btn {
+        display: inline-block;
+        padding: 12px 24px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        text-align: center;
+        margin-top: auto;
+        color: white;
+      }
 
-                .btn-1 { background: #667eea; }
-                .btn-1:hover { background: #5568d3; }
-                .btn-2 { background: #11998e; }
-                .btn-2:hover { background: #0d7a71; }
-                .btn-3 { background: #f5576c; }
-                .btn-3:hover { background: #d9435a; }
-                .btn-4 { background: #fa709a; }
-                .btn-4:hover { background: #e85a8a; }
+      .btn-1 { background: #667eea; }
+      .btn-1:hover { background: #5568d3; }
+      .btn-2 { background: #11998e; }
+      .btn-2:hover { background: #0d7a71; }
+      .btn-3 { background: #f5576c; }
+      .btn-3:hover { background: #d9435a; }
+      .btn-4 { background: #fa709a; }
+      .btn-4:hover { background: #e85a8a; }
 
-                footer {
-                              text-align: center;
-                              color: white;
-                              opacity: 0.8;
-                              font-size: 14px;
-                              margin-top: 40px;
-                }
-            </style>
+      footer {
+        text-align: center;
+        color: white;
+        opacity: 0.8;
+        font-size: 14px;
+        margin-top: 40px;
+      }
+    </style>
   </head>
   <body>
-        <div class="container">
-                  <header>
-                                <h1>🎯 Scholege Speaking Club</h1>
-                              <p>Complete Teacher Playbooks & Training Materials</p>
-                  </header>
-                
-                <div class="playbooks-grid">
-                            <div class="playbook-card card-1">
-                                            <div class="card-header">
-                                                                <h2>Onboarding</h2>
-                                                                <p>Your First Week</p>
-                                            </div>div>
-                                            <div class="card-content">
-                                                                <p>Welcome guide, expectations, communication rules, and cultural boundaries for new teachers.</p>
-                                                                <div class="card-pages">📄 8 Pages</div>div>
-                                                                <a href="01-onboarding-playbook.html" class="btn btn-1">View Playbook →</a>a>
-                                            </div>div>
-                            </div>div>
-                            
-                            <div class="playbook-card card-2">
-                                            <div class="card-header">
-                                                                <h2>Payments</h2>
-                                                                <p>Get Paid Fast</p>
-                                            </div>div>
-                                            <div class="card-content">
-                                                                <p>Payment model, invoicing requirements, payment timeline, and contact information.</p>
-                                                                <div class="card-pages">📄 8 Pages</div>div>
-                                                                <a href="02-payments-invoicing-playbook.html" class="btn btn-2">View Playbook →</a>a>
-                                            </div>div>
-                            </div>div>
-                            
-                            <div class="playbook-card card-3">
-                                            <div class="card-header">
-                                                                <h2>Technical</h2>
-                                                                <p>Setup & Support</p>
-                                            </div>div>
-                                            <div class="card-content">
-                                                                <p>Equipment requirements, troubleshooting guides, and technical support contacts.</p>
-                                                                <div class="card-pages">📄 8 Pages</div>div>
-                                                                <a href="03-technical-support-playbook.html" class="btn btn-3">View Playbook →</a>a>
-                                            </div>div>
-                            </div>div>
-                            
-                            <div class="playbook-card card-4">
-                                            <div class="card-header">
-                                                                <h2>Lesson Flow</h2>
-                                                                <p>Class Excellence</p>
-                                            </div>div>
-                                            <div class="card-content">
-                                                                <p>45-minute lesson structure, speaking techniques, managing different student types, and closing strategies.</p>
-                                                                <div class="card-pages">📄 12 Pages</div>div>
-                                                                <a href="04-lesson-flow-playbook.html" class="btn btn-4">View Playbook →</a>a>
-                                            </div>div>
-                            </div>div>
-                </div>div>
-                
-                <footer>
-                              <p>© 2025 Scholege – Speaking Club Teacher Playbooks</p>p>
-                </footer>
-        </div>div>
+    <div class="container">
+      <header>
+        <h1>🎯 Scholege Speaking Club</h1>
+        <p>Complete Teacher Playbooks & Training Materials</p>
+      </header>
+      
+      <div class="playbooks-grid">
+        <div class="playbook-card card-1">
+          <div class="card-header">
+            <h2>Onboarding</h2>
+            <p>Your First Week</p>
+          </div>
+          <div class="card-content">
+            <p>Welcome guide, expectations, communication rules, and cultural boundaries for new teachers.</p>
+            <div class="card-pages">📄 8 Pages</div>
+            <a href="01-onboarding-playbook.html" class="btn btn-1">View Playbook →</a>
+          </div>
+        </div>
+        
+        <div class="playbook-card card-2">
+          <div class="card-header">
+            <h2>Payments</h2>
+            <p>Get Paid Fast</p>
+          </div>
+          <div class="card-content">
+            <p>Payment model, invoicing requirements, payment timeline, and contact information.</p>
+            <div class="card-pages">📄 8 Pages</div>
+            <a href="02-payments-invoicing-playbook.html" class="btn btn-2">View Playbook →</a>
+          </div>
+        </div>
+        
+        <div class="playbook-card card-3">
+          <div class="card-header">
+            <h2>Technical</h2>
+            <p>Setup & Support</p>
+          </div>
+          <div class="card-content">
+            <p>Equipment requirements, troubleshooting guides, and technical support contacts.</p>
+            <div class="card-pages">📄 8 Pages</div>
+            <a href="03-technical-support-playbook.html" class="btn btn-3">View Playbook →</a>
+          </div>
+        </div>
+        
+        <div class="playbook-card card-4">
+          <div class="card-header">
+            <h2>Lesson Flow</h2>
+            <p>Class Excellence</p>
+          </div>
+          <div class="card-content">
+            <p>45-minute lesson structure, speaking techniques, managing different student types, and closing strategies.</p>
+            <div class="card-pages">📄 12 Pages</div>
+            <a href="04-lesson-flow-playbook.html" class="btn btn-4">View Playbook →</a>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <p>© 2025 Scholege – Speaking Club Teacher Playbooks</p>
+      </footer>
+    </div>
   </body>
-</html>html>
-                </footer></p></p></h1>
-                  </header>
-  </body>
-      </style></title>
-  </head>
+</html>
